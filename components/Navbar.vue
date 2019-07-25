@@ -13,8 +13,7 @@
             </div>
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item">Home</a>
-                    <a class="navbar-item">Documentation</a>
+                    <nuxt-link v-for="(item, index) of pages" :key="index" class="navbar-item" :to="item.link">{{item.page}}</nuxt-link>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">More</a>
                         <div class="navbar-dropdown">
@@ -41,7 +40,15 @@
 
 <script>
 export default {
-    name: 'Navbar'
+    name: 'Navbar',
+    data() {
+        return {
+            pages: [
+                { page: 'Home', link: '/' },
+                { page: 'Blog', link: '/blog'}
+            ]
+        }
+    }
 }
 </script>
 

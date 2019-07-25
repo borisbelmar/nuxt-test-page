@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Un artículo de prueba",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        "img": {
+            "url": "https://picsum.photos/1280/960?random=1",
+            "alt": "Foto artículo 1"
+        },
+        "tags": ["Novedades", "Interesante"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        "date": "11: 09 PM - 1 Jan 2016",
+        "slug": "articulo-prueba"
+    },
+    {
+        "title": "Otro artículo de prueba",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        "img": {
+            "url": "https://picsum.photos/1280/960?random=2",
+            "alt": "Foto artículo 2"
+        },
+        "tags": ["Prueba", "Interesante", "Alguna cosa"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        "date": "11: 09 PM - 1 Jan 2016",
+        "slug": "otro-articulo"
+    },
+    {
+        "title": "Otro artículo de prueba más",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        "img": {
+            "url": "https://picsum.photos/1280/960?random=3",
+            "alt": "Foto artículo 3"
+        },
+        "tags": ["Algún tag random"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        "date": "11: 09 PM - 1 Jan 2016",
+        "slug": "otro-articulo-mas"
+    },
+    {
+        "title": "Y otro más",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        "img": {
+            "url": "https://picsum.photos/1280/960?random=4",
+            "alt": "Foto artículo 4"
+        },
+        "tags": ["Algún tag random", "Interesante"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        "date": "11: 09 PM - 1 Jan 2016",
+        "slug": "y-otro-mas"
+    },
+    {
+        "title": "El quinto artículo de prueba",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        "img": {
+            "url": "https://picsum.photos/1280/960?random=5",
+            "alt": "Foto artículo 5"
+        },
+        "tags": ["Algún tag random", "Interesante", "Alguna cosa"],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.",
+        "date": "11: 09 PM - 1 Jan 2016",
+        "slug": "quinto-articulo"
+    }
+]

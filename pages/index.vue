@@ -13,7 +13,11 @@
         <div class="columns">
           <div class="column has-text-centered">
             <div class="content is-large">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis earum blanditiis pariatur. Alias architecto hic veniam saepe praesentium neque fugit quasi natus at? Officiis aspernatur, dolores doloribus excepturi sint deleniti.</p>
+              <p>
+                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis earum blanditiis pariatur. 
+                Alias architecto hic veniam saepe praesentium neque fugit quasi natus at? Officiis aspernatur, 
+                dolores doloribus excepturi sint deleniti."
+              </p>
             </div>
           </div>
         </div>
@@ -28,7 +32,7 @@
         </div>
         <div class="columns">
           <div class="column" v-for="(item, index) of articles" :key="index">
-            <BlogCard :content="item" />
+            <BlogCard :article="item" :description="false" :tags="false" :date="false"/>
           </div>
         </div>
       </div>
@@ -38,46 +42,27 @@
 
 <script>
 import BlogCard from '@/components/BlogCard.vue';
+import axios from 'axios';
 export default {
   components: {
     BlogCard
   },
   data() {
     return {
-      articles: [
-        { 
-          title: 'Artículo 1',
-          img: {
-            url: 'https://bulma.io/images/placeholders/1280x960.png',
-            alt: 'Foto artículo 1'
-          },
-          tags: ['tag1', 'tag2'], 
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-          date: '11:09 PM - 1 Jan 2016',
-          link: 'articulo-1'
-        },
-        { 
-          title: 'Artículo 2',
-          img: {
-            url: 'https://bulma.io/images/placeholders/1280x960.png',
-            alt: 'Foto artículo 2'
-          },
-          tags: ['tag1', 'tag2', 'tag3'], 
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-          date: '11:09 PM - 1 Jan 2016',
-          link: 'articulo-2'
-        },
-        { 
-          title: 'Artículo 3',
-          img: {
-            url: 'https://bulma.io/images/placeholders/1280x960.png',
-            alt: 'Foto artículo 3'
-          },
-          tags: ['tag1'], 
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-          date: '11:09 PM - 1 Jan 2016',
-          link: 'articulo-3'
-        }
+      articles: []
+    }
+  },
+  async mounted() {
+    await axios.get('./articles.json')
+    .then(res => {
+      this.articles = res.data.slice(0,3);
+    })
+  },
+  head () {
+    return {
+      title: 'Sitio web de prueba con NuxtJS',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Descripción para que mi sitio se rankee en google' }
       ]
     }
   }
